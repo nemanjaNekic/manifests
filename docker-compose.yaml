@@ -13,7 +13,14 @@ services:
     networks:
       - postgres
     restart: on-failure
-  
+
+  busybox:
+    container_name: ecd_fe_client
+    image: busybox
+    networks:
+      - postgres
+    restart: on-failure
+
 networks:
   postgres:
     driver: bridge
