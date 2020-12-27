@@ -1,0 +1,22 @@
+version: '3.5'
+
+services:
+  postgres:
+    container_name: ecd_be_server
+    image: postgres
+    env_file:
+      - postgres.env
+    volumes:
+       - postgres:/data/postgres
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: on-failure
+  
+networks:
+  postgres:
+    driver: bridge
+
+volumes:
+    postgres:
