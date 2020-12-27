@@ -2,8 +2,8 @@
 
 ## To deploy containers
 
-./deploy.sh
+  ./deploy.sh
 
 ## To cleanup
 
-./destroy.sh
+  ./destroy.sh
